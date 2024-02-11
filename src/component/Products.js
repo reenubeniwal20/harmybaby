@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './Product.css';
 import { useParams } from 'react-router-dom';
 
-import image1 from './gallery/error/error1.png';
-import image2 from './gallery/error/error2.png';
-import image3 from './gallery/error/error3.png';
-import image4 from './gallery/error/error4.png';
+//  import image1 from './gallery/error/error1.png';
+//  import image2 from './gallery/error/error2.png';
+//  import image3 from './gallery/error/error3.png';
+//  import image4 from './gallery/error/error4.png';
 import blank from './gallery/error/error5.png';
 import f11 from './gallery/frames/f1/f11.jpg';
 import f12 from './gallery/frames/f1/f12.jpg';
@@ -56,6 +56,10 @@ function Products() {
 
     let { productId } = useParams();
     const [currentImage, setCurrentImage] = useState('');
+    const [currentImage1, setCurrentImage1] = useState('');
+    const [currentImage2, setCurrentImage2] = useState('');
+    const [currentImage3, setCurrentImage3] = useState('');
+    const [currentImage4, setCurrentImage4] = useState('');
     const [currentHeading, setCurrentHeading] = useState('');
     const [currentCaption, setCurrentCaption] = useState('');
     const [currentPrice, setCurrentPrice] = useState('');
@@ -99,13 +103,17 @@ function Products() {
         let priceDeleteL;
         let priceDeleteXL;
 
+        //  let image1;
+        // let image2;
+        // let image3;
+        // let image4;
         switch (productId) {
             case '1':
                 mainImage = f11;
-                image1 = f11;
-                image2 = f12;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f11);
+                setCurrentImage2(f12);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Wedding Photo Frame';
                 caption = 'Resin Photo Frame for Home Decor Personalized Gift Customized with Your Photos & detail with [Clear Groovy Easel Stand]';
                 price = 'Rs.499';
@@ -126,10 +134,10 @@ function Products() {
                 break;
             case '2':
                 mainImage = f21;
-                image1 = f21;
-                image2 = f22;
-                image3 = f23;
-                image4 = f24;
+                setCurrentImage1(f21);
+                setCurrentImage2(f22);
+                setCurrentImage3(f23);
+                setCurrentImage4(f24);
                 heading = 'Maha Mrityunjaya Frame';
                 caption = 'Classy Artz Maha Mrityunjaya Resin Mantra Frame for Office Table. Handmade Maha Mrityunjaya Resin Mantra Frame for Home';
                 price = 'Rs.499';
@@ -150,10 +158,10 @@ function Products() {
                 break;
             case '3':
                 mainImage = f31;
-                image1 = f31;
-                image2 = f32;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f31);
+                setCurrentImage2(f32);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Rose Preserved Frame';
                 caption = 'A timeless beauty captured in resin, preserving the elegance of natures masterpiece. Perfect for adding a touch of floral charm to any space.';
                 price = 'Rs.499';
@@ -174,10 +182,10 @@ function Products() {
                 break;
             case '4':
                 mainImage = f41;
-                image1 = f41;
-                image2 = f42;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f41);
+                setCurrentImage2(f42);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Rose Preserved Frame';
                 caption = 'A timeless beauty captured in resin, preserving the elegance of natures masterpiece. Perfect for adding a touch of floral charm to any space.';
                 price = 'Rs.499';
@@ -198,10 +206,10 @@ function Products() {
                 break;
             case '5':
                 mainImage = f51;
-                image1 = f51;
-                image2 = blank;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f51);
+                setCurrentImage2(blank);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Anniversary Photo Frame';
                 caption = 'Resin Photo Frame for Home Decor Personalized Gift Customized with Your Photos & detail with [Clear Groovy Easel Stand]';
                 price = 'Rs.499';
@@ -222,10 +230,10 @@ function Products() {
                 break;
             case '6':
                 mainImage = f61;
-                image1 = f61;
-                image2 = f62;
-                image3 = f63;
-                image4 = blank;
+                setCurrentImage1(f61);
+                setCurrentImage2(f62);
+                setCurrentImage3(f63);
+                setCurrentImage4(blank);
                 heading = 'Birthday Photo Frame';
                 caption = 'Capture cherished memories with this elegant frame, perfect for preserving special moments and adding a personalized touch to any celebration.';
                 price = 'Rs.499';
@@ -246,10 +254,10 @@ function Products() {
                 break;
             case '7':
                 mainImage = f71;
-                image1 = f71;
-                image2 = f72;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f71);
+                setCurrentImage2(f72);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Family Photo Frame';
                 caption = 'Display your cherished family memories in style with this elegant frame, designed to add warmth and character to your home decor.';
                 price = 'Rs.499';
@@ -270,10 +278,10 @@ function Products() {
                 break;
             case '8':
                 mainImage = f81;
-                image1 = f81;
-                image2 = blank;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f81);
+                setCurrentImage2(blank);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Resin Photo Frame';
                 caption = 'Capture cherished memories with this elegant frame, perfect for preserving special moments and adding a personalized touch to any celebration.';
                 price = 'Rs.499';
@@ -294,10 +302,10 @@ function Products() {
                 break;
             case '9':
                 mainImage = f91;
-                image1 = f91;
-                image2 = f92;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f91);
+                setCurrentImage2(f92);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Resin Photo Frame';
                 caption = 'Preserve your precious memories with this durable and stylish frame, crafted from high-quality resin for long-lasting beauty.';
                 price = 'Rs.499';
@@ -318,10 +326,10 @@ function Products() {
                 break;
             case '10':
                 mainImage = f101;
-                image1 = f101;
-                image2 = f102;
-                image3 = f103;
-                image4 = blank;
+                setCurrentImage1(f101);
+                setCurrentImage2(f102);
+                setCurrentImage3(f103);
+                setCurrentImage4(blank);
                 heading = 'Resin Photo Frame';
                 caption = 'Preserve your precious memories with this durable and stylish frame, crafted from high-quality resin for long-lasting beauty.';
                 price = 'Rs.499';
@@ -342,10 +350,10 @@ function Products() {
                 break;
             case '11':
                 mainImage = f111;
-                image1 = f111;
-                image2 = f112;
-                image3 = f113;
-                image4 = f114;
+                setCurrentImage1(f111);
+                setCurrentImage2(f112);
+                setCurrentImage3(f113);
+                setCurrentImage4(f114);
                 heading = 'Couple Photo Frame';
                 caption = 'Celebrate love with this elegant frame designed to showcase your cherished moments together, perfect for capturing and displaying your special bond.';
                 price = 'Rs.499';
@@ -366,10 +374,10 @@ function Products() {
                 break;
             case '12':
                 mainImage = f121;
-                image1 = f121;
-                image2 = blank;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f121);
+                setCurrentImage2(blank);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Guruji Frame';
                 caption = 'Honor your spiritual guide with this special frame, designed to hold precious memories and serve as a reminder of their wisdom and teachings.';
                 price = 'Rs.499';
@@ -390,10 +398,10 @@ function Products() {
                 break;
             case '13':
                 mainImage = f131;
-                image1 = f131;
-                image2 = blank;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f131);
+                setCurrentImage2(blank);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Maha Mantra Frame';
                 caption = 'Embrace the power of divine chants with this elegantly crafted frame, perfect for displaying sacred mantras and invoking spiritual blessings.';
                 price = 'Rs.499';
@@ -414,10 +422,10 @@ function Products() {
                 break;
             case '14':
                 mainImage = f141;
-                image1 = f141;
-                image2 = f142;
-                image3 = f143;
-                image4 = f144;
+                setCurrentImage1(f141);
+                setCurrentImage2(f142);
+                setCurrentImage3(f143);
+                setCurrentImage4(f144);
                 heading = 'Mool Mantra Frame';
                 caption = 'Capture the essence of divine wisdom with this exquisite frame, encapsulating the profound teachings of the Mool Mantra for spiritual enlightenment and inner harmony.';
                 price = 'Rs.499';
@@ -438,10 +446,10 @@ function Products() {
                 break;
             case '15':
                 mainImage = f151;
-                image1 = f151;
-                image2 = f152;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f151);
+                setCurrentImage2(f152);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Radha Krishan Frame';
                 caption = 'Embrace the divine love and eternal bond of Radha and Krishna with this enchanting frame, radiating their divine presence and blissful union.';
                 price = 'Rs.499';
@@ -462,10 +470,10 @@ function Products() {
                 break;
             case '16':
                 mainImage = f161;
-                image1 = f161;
-                image2 = f162;
-                image3 = f163;
-                image4 = f164;
+                setCurrentImage1(f161);
+                setCurrentImage2(f162);
+                setCurrentImage3(f163);
+                setCurrentImage4(f164);
                 heading = 'Ganeshji Frame';
                 caption = 'Invoke blessings and auspiciousness into your space with this divine frame featuring Lord Ganesha, the remover of obstacles and harbinger of good fortune.';
                 price = 'Rs.499';
@@ -486,10 +494,10 @@ function Products() {
                 break;
             case '17':
                 mainImage = f171;
-                image1 = f171;
-                image2 = f172;
-                image3 = f173;
-                image4 = blank;
+                setCurrentImage1(f171);
+                setCurrentImage2(f172);
+                setCurrentImage3(f173);
+                setCurrentImage4(blank);
                 heading = 'Shivji Frame';
                 caption = 'Embrace the divine presence of Lord Shiva with this elegantly crafted frame, symbolizing strength, transformation, and the eternal cycle of creation and destruction.';
                 price = 'Rs.499';
@@ -510,10 +518,10 @@ function Products() {
                 break;
             case '18':
                 mainImage = f181;
-                image1 = f181;
-                image2 = f182;
-                image3 = blank;
-                image4 = blank;
+                setCurrentImage1(f181);
+                setCurrentImage2(f182);
+                setCurrentImage3(blank);
+                setCurrentImage4(blank);
                 heading = 'Gayatri Mantra Frame';
                 caption = 'Radiate divine energy and spiritual essence with this enchanting frame, featuring the revered Gayatri Mantra, a timeless hymn to the supreme cosmic power, illuminating the path to enlightenment.';
                 price = 'Rs.499';
@@ -533,7 +541,7 @@ function Products() {
                 priceDeleteXL = 'Rs.2599';
                 break;
             default:
-                setCurrentImage(image1);
+                setCurrentImage(blank);
                 setCurrentHeading('Error');
                 return;
         }
@@ -589,19 +597,19 @@ function Products() {
     function imageChange(id) {
         switch (id) {
             case '1':
-                setCurrentImage(image1);
+                setCurrentImage(currentImage1);
                 break;
             case '2':
-                setCurrentImage(image2);
+                setCurrentImage(currentImage2);
                 break;
             case '3':
-                setCurrentImage(image3);
+                setCurrentImage(currentImage3);
                 break;
             case '4':
-                setCurrentImage(image4);
+                setCurrentImage(currentImage4);
                 break;
             default:
-                setCurrentImage(image1);
+                setCurrentImage(currentImage1);
 
         }
     }
@@ -614,10 +622,10 @@ function Products() {
                             <img src={currentImage} alt="" />
                         </div>
                         <div className="productImgChild">
-                            <img src={image1} alt="" onMouseOver={() => imageChange('1')} />
-                            <img src={image2} alt="" onMouseOver={() => imageChange('2')} />
-                            <img src={image3} alt="" onMouseOver={() => imageChange('3')} />
-                            <img src={image4} alt="" onMouseOver={() => imageChange('4')} />
+                            <img src={currentImage1} alt="" onMouseOver={() => imageChange('1')} />
+                            <img src={currentImage2} alt="" onMouseOver={() => imageChange('2')} />
+                            <img src={currentImage3} alt="" onMouseOver={() => imageChange('3')} />
+                            <img src={currentImage4} alt="" onMouseOver={() => imageChange('4')} />
                         </div>
                     </div>
                 </div>
