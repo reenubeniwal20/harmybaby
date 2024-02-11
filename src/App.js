@@ -9,10 +9,11 @@ import {
 } from 'react-router-dom';
 import Main from './component/Main';
 import Category from './component/Category';
-import Product from './component/Product';
+
 import Productcoaster from './component/Productcoaster';
 import Productkeyring from './component/Productkeyring';
 import Productcarhanging from './component/Productcarhanging';
+import Products from './component/Products';
 
 
 
@@ -29,7 +30,7 @@ function App() {
             <Category/>
           </Route>
           <Route path="/product/:productId">
-           <Product/>
+           <Products/>
           </Route>
           <Route path="/productcoaster/:productcoasterId">
            <Productcoaster/>

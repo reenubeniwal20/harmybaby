@@ -354,10 +354,10 @@ function Productcoaster() {
                         <p id="tax">inclusive of all taxes</p>
                         <p id="selectSize">SELECT SIZE</p>
                         <div className="size">
-                            <div className="sizeS" id='sizeSmall' onClick={() => { handleSize(PriceS, PriceDeleteS); colorSmall() }}><p id='s'>{productSizeS} in</p><p className="productPriceInside">{PriceS}</p></div>
-                            <div className="sizeS" id='sizeMedium' onClick={() => { handleSize(PriceM, PriceDeleteM); colorMedium() }}><p id='s'>{productSizeM} in</p><p className="productPriceInside">{PriceM}</p></div>
-                            <div className="sizeS" id='sizeLarge' onClick={() => { handleSize(PriceL, PriceDeleteL); colorLarge() }}><p id='s'>{productSizeL} in</p><p className="productPriceInside">{PriceL}</p></div>
-                            <div className="sizeS" id='sizeExtraLarge' onClick={() => { handleSize(PriceXL, PriceDeleteXL); colorExtraLarge() }}><p id='s'>{productSizeXL} in</p><p className="productPriceInside">{PriceXL}</p></div>
+                            <div className="sizeS" id='sizeSmall' onClick={() => { handleSize(PriceS, PriceDeleteS); colorSmall() }}><p id='s'>{productSizeS} inch</p><p className="productPriceInside">{PriceS}</p></div>
+                            <div className="sizeS" id='sizeMedium' onClick={() => { handleSize(PriceM, PriceDeleteM); colorMedium() }}><p id='s'>{productSizeM} inch</p><p className="productPriceInside">{PriceM}</p></div>
+                            <div className="sizeS" id='sizeLarge' onClick={() => { handleSize(PriceL, PriceDeleteL); colorLarge() }}><p id='s'>{productSizeL} inch</p><p className="productPriceInside">{PriceL}</p></div>
+                            <div className="sizeS" id='sizeExtraLarge' onClick={() => { handleSize(PriceXL, PriceDeleteXL); colorExtraLarge() }}><p id='s'>{productSizeXL} inch</p><p className="productPriceInside">{PriceXL}</p></div>
                         </div>
                         <div className="buyCartbtn">
                             <button id='productCart'>Add to Cart</button>

@@ -52,7 +52,7 @@ import f181 from './gallery/frames/f18/f181.jpg';
 import f182 from './gallery/frames/f18/f182.jpg';
 
 
-function Product() {
+function Products() {
 
     let { productId } = useParams();
     const [currentImage, setCurrentImage] = useState('');
@@ -646,4 +646,4 @@ function Product() {
     );
 }
 
-export default Product;
+export default Products;
