@@ -1,24 +1,54 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './component/Navbar';
+import Home from './component/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import Main from './component/Main';
+import Category from './component/Category';
+import Product from './component/Product';
+import Productcoaster from './component/Productcoaster';
+import Productkeyring from './component/Productkeyring';
+import Productcarhanging from './component/Productcarhanging';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar/>
+        <Switch>
+          <Route path="/main">
+            <Main/>
+          </Route>
+          <Route path="/category/:categoryId">
+            <Category/>
+          </Route>
+          <Route path="/product/:productId">
+           <Product/>
+          </Route>
+          <Route path="/productcoaster/:productcoasterId">
+           <Productcoaster/>
+          </Route>
+          <Route path="/productkeyring/:productkeyringId">
+           <Productkeyring/>
+          </Route>
+          <Route path="/productcarhanging/:productcarhangingId">
+           <Productcarhanging/>
+          </Route>
+          {/* <Route path="/users">
+            <Users />
+          </Route> */}
+          <Route path="/">
+            <Home/>
+          </Route>
+        </Switch>
+      </Router>
+      </>
   );
 }
 

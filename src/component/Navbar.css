@@ -1,0 +1,46 @@
+.bg-body-tertiary{
+    background-color: #eee !important;
+}
+.navbar-brand{
+    color: red;
+    font-family: 'Kalam', cursive;
+    font-size: 25px;
+}
+.nav-item {
+    padding-left: 50px;
+}
+.collapse{
+    margin-left: 21%;
+}
+#cart{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+#cartresponsive{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+@media (max-width:400px){
+    .navbar-brand{
+        
+        font-size: 20px;
+    }
+}
+@media (max-width:1000px) {
+    .nav-item {
+        padding-left: 0px;
+    }
+    .collapse{
+        margin-left: 0%;
+    }
+    #cart{
+        display: none;
+    }
+}
+@media (min-width:1001px){
+    #cartresponsive{
+        display: none;
+    }
+}
