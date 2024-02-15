@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Product.css';
 import { useParams } from 'react-router-dom';
+import Axios from "axios";
+
 
 //  import image1 from './gallery/error/error1.png';
 //  import image2 from './gallery/error/error2.png';
@@ -50,9 +52,15 @@ import f172 from './gallery/frames/f17/f172.jpg';
 import f173 from './gallery/frames/f17/f173.jpg';
 import f181 from './gallery/frames/f18/f181.jpg';
 import f182 from './gallery/frames/f18/f182.jpg';
+import dt1 from './gallery/dogtag/dt1.jpg';
+import dt2 from './gallery/dogtag/dt2.jpg';
+import dt3 from './gallery/dogtag/dt3.jpg';
+import dt4 from './gallery/dogtag/dt4.jpg';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 function Products() {
+   
 
     let { productId } = useParams();
     const [currentImage, setCurrentImage] = useState('');
@@ -116,21 +124,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Wedding Photo Frame';
                 caption = 'Resin Photo Frame for Home Decor Personalized Gift Customized with Your Photos & detail with [Clear Groovy Easel Stand]';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.899';
+                priceM = '799';
+                priceDeleteM = '899';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '2':
                 mainImage = f21;
@@ -140,21 +148,21 @@ function Products() {
                 setCurrentImage4(f24);
                 heading = 'Maha Mrityunjaya Frame';
                 caption = 'Classy Artz Maha Mrityunjaya Resin Mantra Frame for Office Table. Handmade Maha Mrityunjaya Resin Mantra Frame for Home';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.899';
+                priceM = '799';
+                priceDeleteM = '899';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.1599';
-                priceDeleteXL = 'Rs.1699';
+                priceXL = '1599';
+                priceDeleteXL = '1699';
                 break;
             case '3':
                 mainImage = f31;
@@ -164,21 +172,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Rose Preserved Frame';
                 caption = 'A timeless beauty captured in resin, preserving the elegance of natures masterpiece. Perfect for adding a touch of floral charm to any space.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.849';
-                priceDeleteM = 'Rs.949';
+                priceM = '849';
+                priceDeleteM = '949';
                 L = '8';
-                priceL = 'Rs.1349';
-                priceDeleteL = 'Rs.1449';
+                priceL = '1349';
+                priceDeleteL = '1449';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '4':
                 mainImage = f41;
@@ -186,23 +194,23 @@ function Products() {
                 setCurrentImage2(f42);
                 setCurrentImage3(blank);
                 setCurrentImage4(blank);
-                heading = 'Rose Preserved Frame';
+                heading = 'Rose Preserved Frame [2]';
                 caption = 'A timeless beauty captured in resin, preserving the elegance of natures masterpiece. Perfect for adding a touch of floral charm to any space.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.849';
-                priceDeleteM = 'Rs.949';
+                priceM = '849';
+                priceDeleteM = '949';
                 L = '8';
-                priceL = 'Rs.1349';
-                priceDeleteL = 'Rs.1449';
+                priceL = '1349';
+                priceDeleteL = '1449';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '5':
                 mainImage = f51;
@@ -212,21 +220,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Anniversary Photo Frame';
                 caption = 'Resin Photo Frame for Home Decor Personalized Gift Customized with Your Photos & detail with [Clear Groovy Easel Stand]';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '6':
                 mainImage = f61;
@@ -236,21 +244,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Birthday Photo Frame';
                 caption = 'Capture cherished memories with this elegant frame, perfect for preserving special moments and adding a personalized touch to any celebration.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '7':
                 mainImage = f71;
@@ -260,21 +268,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Family Photo Frame';
                 caption = 'Display your cherished family memories in style with this elegant frame, designed to add warmth and character to your home decor.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '8':
                 mainImage = f81;
@@ -284,21 +292,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Resin Photo Frame';
                 caption = 'Capture cherished memories with this elegant frame, perfect for preserving special moments and adding a personalized touch to any celebration.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '9':
                 mainImage = f91;
@@ -306,23 +314,23 @@ function Products() {
                 setCurrentImage2(f92);
                 setCurrentImage3(blank);
                 setCurrentImage4(blank);
-                heading = 'Resin Photo Frame';
+                heading = 'Resin Photo Frame [2]';
                 caption = 'Preserve your precious memories with this durable and stylish frame, crafted from high-quality resin for long-lasting beauty.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '10':
                 mainImage = f101;
@@ -330,23 +338,23 @@ function Products() {
                 setCurrentImage2(f102);
                 setCurrentImage3(f103);
                 setCurrentImage4(blank);
-                heading = 'Resin Photo Frame';
+                heading = 'Resin Photo Frame [3]';
                 caption = 'Preserve your precious memories with this durable and stylish frame, crafted from high-quality resin for long-lasting beauty.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.899';
-                priceDeleteM = 'Rs.999';
+                priceM = '899';
+                priceDeleteM = '999';
                 L = '8';
-                priceL = 'Rs.1399';
-                priceDeleteL = 'Rs.1499';
+                priceL = '1399';
+                priceDeleteL = '1499';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '11':
                 mainImage = f111;
@@ -356,21 +364,21 @@ function Products() {
                 setCurrentImage4(f114);
                 heading = 'Couple Photo Frame';
                 caption = 'Celebrate love with this elegant frame designed to showcase your cherished moments together, perfect for capturing and displaying your special bond.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '12':
                 mainImage = f121;
@@ -380,21 +388,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Guruji Frame';
                 caption = 'Honor your spiritual guide with this special frame, designed to hold precious memories and serve as a reminder of their wisdom and teachings.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
                 break;
             case '13':
                 mainImage = f131;
@@ -404,21 +412,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Maha Mantra Frame';
                 caption = 'Embrace the power of divine chants with this elegantly crafted frame, perfect for displaying sacred mantras and invoking spiritual blessings.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.1599';
-                priceDeleteXL = 'Rs.1699';
+                priceXL = '1599';
+                priceDeleteXL = '1699';
                 break;
             case '14':
                 mainImage = f141;
@@ -428,21 +436,21 @@ function Products() {
                 setCurrentImage4(f144);
                 heading = 'Mool Mantra Frame';
                 caption = 'Capture the essence of divine wisdom with this exquisite frame, encapsulating the profound teachings of the Mool Mantra for spiritual enlightenment and inner harmony.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.1599';
-                priceDeleteXL = 'Rs.1699';
+                priceXL = '1599';
+                priceDeleteXL = '1699';
                 break;
             case '15':
                 mainImage = f151;
@@ -452,21 +460,21 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Radha Krishan Frame';
                 caption = 'Embrace the divine love and eternal bond of Radha and Krishna with this enchanting frame, radiating their divine presence and blissful union.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2199';
-                priceDeleteXL = 'Rs.2299';
+                priceXL = '2199';
+                priceDeleteXL = '2299';
                 break;
             case '16':
                 mainImage = f161;
@@ -476,21 +484,21 @@ function Products() {
                 setCurrentImage4(f164);
                 heading = 'Ganeshji Frame';
                 caption = 'Invoke blessings and auspiciousness into your space with this divine frame featuring Lord Ganesha, the remover of obstacles and harbinger of good fortune.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2199';
-                priceDeleteXL = 'Rs.2299';
+                priceXL = '2199';
+                priceDeleteXL = '2299';
                 break;
             case '17':
                 mainImage = f171;
@@ -500,23 +508,24 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Shivji Frame';
                 caption = 'Embrace the divine presence of Lord Shiva with this elegantly crafted frame, symbolizing strength, transformation, and the eternal cycle of creation and destruction.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2299';
-                priceDeleteXL = 'Rs.2399';
+                priceXL = '2299';
+                priceDeleteXL = '2399';
                 break;
-            case '18':
+            
+                case '18':
                 mainImage = f181;
                 setCurrentImage1(f181);
                 setCurrentImage2(f182);
@@ -524,21 +533,45 @@ function Products() {
                 setCurrentImage4(blank);
                 heading = 'Gayatri Mantra Frame';
                 caption = 'Radiate divine energy and spiritual essence with this enchanting frame, featuring the revered Gayatri Mantra, a timeless hymn to the supreme cosmic power, illuminating the path to enlightenment.';
-                price = 'Rs.499';
-                deletePrice = 'Rs.599';
+                price = '499';
+                deletePrice = '599';
                 discount = '17%';
                 S = '4';
-                priceS = 'Rs.499';
-                priceDeleteS = 'Rs.599';
+                priceS = '499';
+                priceDeleteS = '599';
                 M = '6';
-                priceM = 'Rs.799';
-                priceDeleteM = 'Rs.799';
+                priceM = '799';
+                priceDeleteM = '799';
                 L = '8';
-                priceL = 'Rs.1199';
-                priceDeleteL = 'Rs.1299';
+                priceL = '1199';
+                priceDeleteL = '1299';
                 XL = '12';
-                priceXL = 'Rs.2499';
-                priceDeleteXL = 'Rs.2599';
+                priceXL = '2499';
+                priceDeleteXL = '2599';
+                break;
+                case '19':
+                mainImage = dt1;
+                setCurrentImage1(dt1);
+                setCurrentImage2(dt2);
+                setCurrentImage3(dt3);
+                setCurrentImage4(dt4);
+                heading = 'Dog Tag';
+                caption = 'Resin-Cast Dog Tags: Infusing durability and style, these meticulously crafted tags ensure your pets identity remains intact while adding a touch of uniqueness to their ensemble.';
+                price = '300';
+                deletePrice = '350';
+                discount = '15%';
+                S = '1.5';
+                priceS = '299';
+                priceDeleteS = '349';
+                M = '2';
+                priceM = '349';
+                priceDeleteM = '399';
+                L = '1.5';
+                priceL = '299';
+                priceDeleteL = '349';
+                XL = '2';
+                priceXL = '349';
+                priceDeleteXL = '399';
                 break;
             default:
                 setCurrentImage(blank);
@@ -564,6 +597,31 @@ function Products() {
         setPriceDeleteL(priceDeleteL);
         setPriceDeleteXL(priceDeleteXL);
     }, [productId]);
+    const [dataCart, setDataCart] = useState("");
+    const [dataBuy, setDataBuy] = useState("");
+    const history = useHistory();
+    const sendDataCart = async () => {
+        const response = await Axios.post('http://localhost:5001/setDataCart', {
+            currentPrice: currentPrice,
+            currentHeading: currentHeading
+        });
+        setDataCart(response.data);
+        window.location.reload();
+    }
+const sendDataBuy = async()=>{
+
+    const response =await Axios.post('http://localhost:5001/setDataBuy', {
+        currentPrice: currentPrice,
+        currentHeading: currentHeading
+    });
+    setDataBuy(response.data);
+    redirect();
+
+
+}
+const redirect=()=>{
+    history.push('/order');
+};
 
     const handleSize = (p, dp) => {
         setCurrentPrice(p);
@@ -634,18 +692,18 @@ function Products() {
                         <h3 className="productHeading">{currentHeading}</h3>
                         <p id="productCaption">{currentCaption}</p>
                         <div className="line"></div>
-                        <h4 id="productPrice">{currentPrice}<span id='productPriceCut'> M.R.P: </span><del>{currentDeletePrice}</del><span id="discountPercent">({currentPriceDiscount} OFF)</span></h4>
+                        <h4 id="productPrice">Rs.{currentPrice}<span id='productPriceCut'> M.R.P: </span><del>Rs.{currentDeletePrice}</del><span id="discountPercent">({currentPriceDiscount} OFF)</span></h4>
                         <p id="tax">inclusive of all taxes</p>
                         <p id="selectSize">SELECT SIZE</p>
                         <div className="size">
-                            <div className="sizeS" id='sizeSmall' onClick={() => { handleSize(PriceS, PriceDeleteS); colorSmall() }}><p id='s'>{productSizeS} inch</p><p className="productPriceInside">{PriceS}</p></div>
-                            <div className="sizeS" id='sizeMedium' onClick={() => { handleSize(PriceM, PriceDeleteM); colorMedium() }}><p id='s'>{productSizeM} inch</p><p className="productPriceInside">{PriceM}</p></div>
-                            <div className="sizeS" id='sizeLarge' onClick={() => { handleSize(PriceL, PriceDeleteL); colorLarge() }}><p id='s'>{productSizeL} inch</p><p className="productPriceInside">{PriceL}</p></div>
-                            <div className="sizeS" id='sizeExtraLarge' onClick={() => { handleSize(PriceXL, PriceDeleteXL); colorExtraLarge() }}><p id='s'>{productSizeXL} inch</p><p className="productPriceInside">{PriceXL}</p></div>
+                            <div className="sizeS" id='sizeSmall' onClick={() => { handleSize(PriceS, PriceDeleteS); colorSmall() }}><p id='s'>{productSizeS} inch</p><p className="productPriceInside">Rs.{PriceS}</p></div>
+                            <div className="sizeS" id='sizeMedium' onClick={() => { handleSize(PriceM, PriceDeleteM); colorMedium() }}><p id='s'>{productSizeM} inch</p><p className="productPriceInside">Rs.{PriceM}</p></div>
+                            <div className="sizeS" id='sizeLarge' onClick={() => { handleSize(PriceL, PriceDeleteL); colorLarge() }}><p id='s'>{productSizeL} inch</p><p className="productPriceInside">Rs.{PriceL}</p></div>
+                            <div className="sizeS" id='sizeExtraLarge' onClick={() => { handleSize(PriceXL, PriceDeleteXL); colorExtraLarge() }}><p id='s'>{productSizeXL} inch</p><p className="productPriceInside">Rs.{PriceXL}</p></div>
                         </div>
                         <div className="buyCartbtn">
-                            <button id='productCart'>Add to Cart</button>
-                            <button id='productBuy'>Buy Now</button>
+                        <button id='productCart' onClick={sendDataCart}>Add to Cart</button>
+                            <button id='productBuy'onClick={sendDataBuy}>Buy Now</button>
                         </div>
                     </div>
                 </div>

@@ -63,6 +63,24 @@ import ch3 from './gallery/car hanging/ch3.jpg';
 import ch4 from './gallery/car hanging/ch4.jpg';
 import ch5 from './gallery/car hanging/ch5.jpg';
 import ch6 from './gallery/car hanging/ch6.jpg';
+import diya1 from './gallery/diwali/diwa/diwa1.jpg';
+import diya2 from './gallery/diwali/diwa/diwa2.jpg';
+import diya3 from './gallery/diwali/diwa/diwa3.jpg';
+import diya4 from './gallery/diwali/diwa/diwa4.jpg';
+import diya5 from './gallery/diwali/diwa/diwa5.jpg';
+import diya6 from './gallery/diwali/diwa/diwa6.jpg';
+import diya7 from './gallery/diwali/diwa/diwa7.jpg';
+import diya8 from './gallery/diwali/diwa/diwa8.jpg';
+import diya9 from './gallery/diwali/diwa/diwa9.jpg';
+import diya10 from './gallery/diwali/diwa/diwa10.jpg';
+import diya11 from './gallery/diwali/diwa/diwa11.jpg';
+import diya12 from './gallery/diwali/diwa/diwa12.jpg';
+import thali1 from './gallery/diwali/thali/thali1.jpg';
+import thali2 from './gallery/diwali/thali/thali2.jpg';
+import thali3 from './gallery/diwali/thali/thali3.jpg';
+import thali4 from './gallery/diwali/thali/thali4.jpg';
+import thali5 from './gallery/diwali/thali/thali5.jpg';
+import thali6 from './gallery/diwali/thali/thali6.jpg';
 
 
 import { Link, useParams } from 'react-router-dom/cjs/react-router-dom.min';
@@ -585,6 +603,146 @@ export default function Category() {
         case '11':
             break;
         case '12':
+            break;
+        case '13':
+            content = <div className='parentCategory'>
+                <h1>T Lights</h1>
+                <div className='frameCategory'>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/1'> 
+                        <img id='childFrameImg' src={diya1} alt="" />
+                        <p id='childFrameId'>Leaf T Light</p>
+                        <p id='price'>Rs.69 <span id='priceCut'>M.R.P: </span><del>Rs.99</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/2'>
+                        <img id='childFrameImg' src={diya2} alt="" />
+                         <p id='childFrameId'>Mandala</p>
+                        <p id='price'>Rs.79 <span id='priceCut'>M.R.P: </span><del>Rs.119</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/3'>
+                        <img id='childFrameImg' src={diya3} alt="" />
+                         <p id='childFrameId'>Wooden Lotus T Light</p>
+                        <p id='price'>Rs.49 <span id='priceCut'>M.R.P: </span><del>Rs.99</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/4'> 
+                        <img id='childFrameImg' src={diya4} alt="" />
+                        <p id='childFrameId'>Lotus T Light</p>
+                        <p id='price'>Rs.199 <span id='priceCut'>M.R.P: </span><del>Rs.249</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/5'>
+                        <img id='childFrameImg' src={diya5} alt="" />
+                         <p id='childFrameId'>Butterfly T Light</p>
+                        <p id='price'>Rs.79 <span id='priceCut'>M.R.P: </span><del>Rs.99</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/6'>
+                        <img id='childFrameImg' src={diya6} alt="" />
+                         <p id='childFrameId'>Flower T Light</p>
+                        <p id='price'>Rs.59 <span id='priceCut'>M.R.P: </span><del>Rs.99</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/1'> 
+                        <img id='childFrameImg' src={diya7} alt="" />
+                        <p id='childFrameId'>Square T Light</p>
+                        <p id='price'>Rs.79 <span id='priceCut'>M.R.P: </span><del>Rs.99</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/2'>
+                        <img id='childFrameImg' src={diya8} alt="" />
+                         <p id='childFrameId'>Star T Light</p>
+                        <p id='price'>Rs.89 <span id='priceCut'>M.R.P: </span><del>Rs.119</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/3'>
+                        <img id='childFrameImg' src={diya9} alt="" />
+                         <p id='childFrameId'>Red Crystal T Light</p>
+                        <p id='price'>Rs.119 <span id='priceCut'>M.R.P: </span><del>Rs.189</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/4'> 
+                        <img id='childFrameImg' src={diya10} alt="" />
+                        <p id='childFrameId'>Purple Crystal T Light</p>
+                        <p id='price'>Rs.119 <span id='priceCut'>M.R.P: </span><del>Rs.189</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/5'>
+                        <img id='childFrameImg' src={diya11} alt="" />
+                         <p id='childFrameId'>Green Crystal T Light</p>
+                        <p id='price'>Rs.119 <span id='priceCut'>M.R.P: </span><del>Rs.189</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcoaster/6'>
+                        <img id='childFrameImg' src={diya12} alt="" />
+                         <p id='childFrameId'>Pink Crystal T Light</p>
+                        <p id='price'>Rs.119 <span id='priceCut'>M.R.P: </span><del>Rs.189</del></p>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            break;
+         case '14':
+            content = <div className='parentCategory'>
+                <h1>Thalis</h1>
+                <div className='frameCategory'>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcarhanging/1'> 
+                        <img id='childFrameImg' src={thali1} alt="" />
+                        <p id='childFrameId'>Pooja Thali</p>
+                        <p id='price'>Rs.799 <span id='priceCut'>M.R.P: </span><del>Rs.899</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcarhanging/2'> 
+                        <img id='childFrameImg' src={thali2} alt="" />
+                        <p id='childFrameId'>Pooja Thali</p>
+                        <p id='price'>Rs.599 <span id='priceCut'>M.R.P: </span><del>Rs.699</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcarhanging/3'>
+                        <img id='childFrameImg' src={thali3} alt="" />
+                         <p id='childFrameId'>Pooja Thali</p>
+                        <p id='price'>Rs.599 <span id='priceCut'>M.R.P: </span><del>Rs.699</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcarhanging/4'>
+                        <img id='childFrameImg' src={thali4} alt="" />
+                         <p id='childFrameId'>Pooja Thali</p>
+                        <p id='price'>Rs.599 <span id='priceCut'>M.R.P: </span><del>Rs.599</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcarhanging/5'>
+                        <img id='childFrameImg' src={thali5} alt="" />
+                         <p id='childFrameId'>Pooja Thali</p>
+                        <p id='price'>Rs.599 <span id='priceCut'>M.R.P: </span><del>Rs.699</del></p>
+                        </Link>
+                    </div>
+                    <div className="childFrame">
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/productcarhanging/6'> 
+                        <img id='childFrameImg' src={thali6} alt="" />
+                        <p id='childFrameId'>Pooja Thali</p>
+                        <p id='price'>Rs.599 <span id='priceCut'>M.R.P: </span><del>Rs.699</del></p>
+                        </Link>
+                    </div>
+                </div>
+            </div>
             break;
         default:
             content = <h2>Invalid</h2>

@@ -15,41 +15,81 @@ import Productkeyring from './component/Productkeyring';
 import Productcarhanging from './component/Productcarhanging';
 import Products from './component/Products';
 
+import Signup from './component/Signup';
+import SignIn from './SignIn';
+import Cart from './component/Cart';
+import Orders from './component/Orders';
+import Confirmedorder from './component/Confirmedorder';
+import Diwali from './component/Diwali';
+
+
 
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar/>
+
         <Switch>
+          <Route path="/signup">
+            <Signup />
+          </Route>
           <Route path="/main">
-            <Main/>
+            <Navbar />
+            <Main />
+          </Route>
+          <Route path="/diwali">
+            <Navbar />
+            <Diwali/>
           </Route>
           <Route path="/category/:categoryId">
-            <Category/>
+          <Navbar/>
+            <Category />
           </Route>
           <Route path="/product/:productId">
-           <Products/>
+          <Navbar/>
+            <Products />
           </Route>
           <Route path="/productcoaster/:productcoasterId">
-           <Productcoaster/>
+          <Navbar/>
+            <Productcoaster />
           </Route>
           <Route path="/productkeyring/:productkeyringId">
-           <Productkeyring/>
+          <Navbar/>
+            <Productkeyring />
           </Route>
           <Route path="/productcarhanging/:productcarhangingId">
-           <Productcarhanging/>
+          <Navbar/>
+            <Productcarhanging />
+          </Route>
+          
+          <Route path="/start">
+          <Navbar/>
+            <Home />
+          </Route>
+          <Route path="/cart">
+          <Navbar/>
+            <Cart />
+          </Route>
+          <Route path="/order">
+          <Navbar/>
+           <Orders/>
+          </Route>
+          <Route path="/confirmedorder">
+          <Navbar/>
+           <Confirmedorder/>
           </Route>
           {/* <Route path="/users">
             <Users />
           </Route> */}
           <Route path="/">
-            <Home/>
+            <SignIn />
+
           </Route>
+
         </Switch>
       </Router>
-      </>
+    </>
   );
 }
 
